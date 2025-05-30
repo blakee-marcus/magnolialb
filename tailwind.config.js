@@ -5,7 +5,7 @@ export default {
       colors: {
         brand: {
           primary: '#984062', // Deep magenta - theatrical accent
-          secondary: '#FAF2A1', // Creamy yellow - warmth and accessibility
+          secondary: '#C29B30', // Creamy yellow - warmth and accessibility
           dark: '#2d1b25', // Optional deep background color
           light: '#fffaf0', // Optional light section background
         },

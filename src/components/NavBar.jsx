@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Sparkles } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Sparkles, Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const navVariants = {
   hidden: { y: -50, opacity: 0 },
@@ -22,7 +22,24 @@ const logoVariants = {
   },
 };
 
+const menuVariants = {
+  hidden: { opacity: 0, height: 0 },
+  visible: {
+    opacity: 1,
+    height: 'auto',
+    transition: { duration: 0.3, ease: 'easeOut' },
+  },
+  exit: {
+    opacity: 0,
+    height: 0,
+    transition: { duration: 0.2, ease: 'easeIn' },
+  },
+};
+
 function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const navLinks = ['boards', 'events', 'subscribe', 'about'];
+
   return (
     <motion.header
       variants={navVariants}
@@ -40,9 +57,9 @@ function NavBar() {
           Theatrical Table
         </Link>
 
-        {/* Nav Links */}
+        {/* Desktop Nav */}
         <nav className='hidden md:flex gap-6 text-sm font-semibold text-brand-primary'>
-          {['boards', 'events', 'subscribe', 'about'].map((path) => (
+          {navLinks.map((path) => (
             <NavLink
               key={path}
               to={`/${path}`}
@@ -55,7 +72,40 @@ function NavBar() {
             </NavLink>
           ))}
         </nav>
+
+        {/* Mobile Toggle */}
+        <button
+          onClick={() => setIsOpen((prev) => !prev)}
+          className='md:hidden p-2 rounded-md text-brand-primary focus:outline-none'>
+          {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
+        </button>
       </div>
+
+      {/* Mobile Nav Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.nav
+            variants={menuVariants}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+            className='md:hidden flex flex-col gap-3 px-4 pb-4 text-sm font-semibold text-brand-primary bg-white border-t border-brand-secondary shadow'>
+            {navLinks.map((path) => (
+              <NavLink
+                key={path}
+                to={`/${path}`}
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) =>
+                  isActive
+                    ? 'text-brand-secondary underline underline-offset-4'
+                    : 'hover:text-brand-secondary transition'
+                }>
+                {path.charAt(0).toUpperCase() + path.slice(1)}
+              </NavLink>
+            ))}
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
