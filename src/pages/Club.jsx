@@ -24,12 +24,12 @@ const patreonLink = 'https://www.patreon.com/theatricaltable?subscribed=true';
 const tiers = [
   {
     name: 'Opening Night',
-    icon: <Star className='w-6 h-6 text-brand-secondary' />,
+    icon: <Star className='w-6 h-6 text-brand-buttercream' />,
     features: ['Monthly DIY recipe zine', 'Event pre-sales access', 'Curated shopping lists'],
   },
   {
     name: 'Headliner',
-    icon: <Ticket className='w-6 h-6 text-brand-secondary' />,
+    icon: <Ticket className='w-6 h-6 text-brand-buttercream' />,
     features: [
       'All Opening Night perks',
       'Free local delivery on boards',
@@ -38,7 +38,7 @@ const tiers = [
   },
   {
     name: 'Encore Club',
-    icon: <Crown className='w-6 h-6 text-brand-secondary' />,
+    icon: <Crown className='w-6 h-6 text-brand-buttercream' />,
     features: [
       'All Headliner perks',
       'Early tastings of new offerings',
@@ -48,7 +48,7 @@ const tiers = [
   },
 ];
 
-function Subscribe() {
+function Club() {
   const [showModal, setShowModal] = useState(false);
   const [searchParams] = useSearchParams();
 
@@ -62,23 +62,20 @@ function Subscribe() {
     <div className='bg-brand-light text-brand-dark font-body px-6 py-20 space-y-28'>
       <ThankYouModal isOpen={showModal} onClose={() => setShowModal(false)} />
       <Helmet>
-        <title>Subscribe | Theatrical Table – Patreon Tiers in Long Beach, CA</title>
+        <title>Join the Club | Dramatis Membership Tiers</title>
         <meta
           name='description'
-          content='Become a patron of Theatrical Table and access exclusive events, seasonal zines, custom grazing boards, and more in Long Beach, California.'
+          content='Support Dramatis and become part of our inner circle. Membership includes seasonal zines, board styling guides, game night invites, and surprise perks.'
         />
-        <meta
-          name='keywords'
-          content='Theatrical Table Patreon, Long Beach charcuterie subscription, exclusive events Long Beach, zines, board styling, gin nights, DIY grazing boards'
-        />
-        <meta property='og:title' content='Subscribe | Theatrical Table' />
+        <link rel='canonical' href='https://theatricaltable.com/subscribe' />
+        <meta property='og:title' content='Join the Club | Dramatis' />
         <meta
           property='og:description'
-          content='Support Theatrical Table in Long Beach and unlock creative perks like game nights, exclusive deliveries, and board styling zines.'
+          content='Step behind the curtain and into the heart of Dramatis. Exclusive perks, immersive moments, and a seat at the table await.'
         />
         <meta property='og:image' content='https://theatricaltable.com/og-subscribe.jpg' />
         <meta property='og:url' content='https://theatricaltable.com/subscribe' />
-        <link rel='canonical' href='https://theatricaltable.com/subscribe' />
+        <meta name='twitter:card' content='summary_large_image' />
       </Helmet>
 
       {/* Hero */}
@@ -87,34 +84,35 @@ function Subscribe() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className='text-center'>
-        <h1 className='text-4xl md:text-5xl font-display font-bold text-brand-primary mb-4'>
-          Become a Patron of the Table
+        <h1 className='text-4xl md:text-5xl font-display font-bold text-brand-rosewood mb-4'>
+          Join the Club
         </h1>
         <p className='text-lg text-neutral-800 max-w-2xl mx-auto'>
-          Support the drama, flavor, and fun behind every board, event, and DIY delight.
+          Step into a slower, more sparkly life. With zines, events, and edible magic delivered to
+          your door, this membership is your all-access pass to Dramatis.
         </p>
         <a
           href={patreonLink}
           target='_blank'
           rel='noopener noreferrer'
-          className='inline-flex items-center gap-2 mt-6 px-6 py-3 bg-brand-primary text-white rounded-xl font-medium hover:bg-brand-dark transition'>
+          className='inline-flex items-center gap-2 mt-6 px-6 py-3 bg-brand-rosewood text-white rounded-xl font-medium hover:bg-brand-dark transition'>
           Join Us on Patreon <ExternalLink className='w-4 h-4' />
         </a>
       </motion.div>
 
-      {/* Dynamic Callout */}
-      <div className='bg-brand-secondary/50 border border-brand-secondary rounded-2xl p-6 max-w-3xl mx-auto text-center shadow-card'>
+      {/* Callout */}
+      <div className='bg-brand-buttercream/50 border border-brand-buttercream rounded-2xl p-6 max-w-3xl mx-auto text-center shadow-card'>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: 'easeOut' }}>
           <div className='flex justify-center mb-2'>
-            <Users className='w-6 h-6 text-brand-primary' />
+            <Users className='w-6 h-6 text-brand-rosewood' />
           </div>
           <p className='text-lg font-medium text-brand-dark'>
-            🎉 Over <span className='font-bold'>150 patrons</span> are already part of the table —
-            don’t miss your seat!
+            ✨ <span className='font-bold'>150+ patrons</span> have already taken their seat. Ready
+            for yours?
           </p>
         </motion.div>
       </div>
@@ -130,7 +128,7 @@ function Subscribe() {
             variants={tierVariants}
             className='bg-white shadow-dramatic rounded-2xl p-6 flex flex-col items-center text-center'>
             <div className='mb-4'>{tier.icon}</div>
-            <h2 className='font-display text-2xl font-semibold text-brand-primary mb-2'>
+            <h2 className='font-display text-2xl font-semibold text-brand-rosewood mb-2'>
               {tier.name}
             </h2>
             <ul className='text-sm text-neutral-800 mb-4 space-y-2'>
@@ -142,9 +140,9 @@ function Subscribe() {
         ))}
       </div>
 
-      {/* Behind the Curtain */}
+      {/* Perks Preview */}
       <section className='max-w-6xl mx-auto px-2'>
-        <h2 className='text-3xl font-display text-center text-brand-primary mb-8'>
+        <h2 className='text-3xl font-display text-center text-brand-rosewood mb-8'>
           Behind the Curtain
         </h2>
         <div className='grid gap-6 md:grid-cols-3'>
@@ -157,12 +155,12 @@ function Subscribe() {
             {
               title: 'Gin Night Moments',
               image: GinNight,
-              caption: 'A custom gin experience you can only get here.',
+              caption: 'A custom gin experience for members only.',
             },
             {
               title: 'Board Styling Tips',
               image: BoardTips,
-              caption: 'Patron-only videos on how to style your own board.',
+              caption: 'Patron-only tutorials to elevate your hosting game.',
             },
           ].map(({ title, image, caption }) => (
             <motion.div
@@ -174,7 +172,7 @@ function Subscribe() {
               className='rounded-xl bg-white shadow-card overflow-hidden'>
               <img src={image} alt={title} className='w-full h-48 object-cover object-center' />
               <div className='p-4'>
-                <h3 className='font-display font-semibold text-lg text-brand-primary'>{title}</h3>
+                <h3 className='font-display font-semibold text-lg text-brand-rosewood'>{title}</h3>
                 <p className='text-sm text-neutral-800'>{caption}</p>
               </div>
             </motion.div>
@@ -184,12 +182,12 @@ function Subscribe() {
 
       {/* Final CTA */}
       <div className='text-center mt-16'>
-        <p className='text-neutral-800 mb-4'>The next act is waiting for you...</p>
+        <p className='text-neutral-800 mb-4'>The table is set. The curtain’s about to rise.</p>
         <a
           href={patreonLink}
           target='_blank'
           rel='noopener noreferrer'
-          className='inline-flex items-center gap-2 px-6 py-3 bg-brand-primary text-white rounded-xl font-medium hover:bg-brand-dark transition'>
+          className='inline-flex items-center gap-2 px-6 py-3 bg-brand-rosewood text-white rounded-xl font-medium hover:bg-brand-dark transition'>
           Join Us on Patreon <ExternalLink className='w-4 h-4' />
         </a>
       </div>
@@ -197,4 +195,4 @@ function Subscribe() {
   );
 }
 
-export default Subscribe;
+export default Club;

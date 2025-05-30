@@ -26,23 +26,23 @@ const fadeInUp = {
 const carouselItems = [
   {
     title: 'Friday Game Night',
-    desc: 'Join us this Friday at 7 PM for cozy board games, grazing bites, and casual drinks. First-timers welcome!',
-    icon: <CalendarDays className='w-6 h-6 text-brand-secondary' />,
+    desc: '7 PM. Bites, dice, and delightful company. Dramatis casuals welcome.',
+    icon: <CalendarDays className='w-6 h-6 text-brand-charcoalTeal' />,
   },
   {
-    title: 'Magic: The Gathering Draft',
-    desc: 'Saturday afternoon we’re drafting a spicy set — bring your best bluff and let the drama unfold.',
-    icon: <ScrollText className='w-6 h-6 text-brand-secondary' />,
+    title: 'MTG: The Draft Awakens',
+    desc: 'Saturday showdown. Bluff boldly. Draft dramatically. Snacks included.',
+    icon: <ScrollText className='w-6 h-6 text-brand-charcoalTeal' />,
   },
   {
     title: 'Hot Drop: Summer Zine',
-    desc: 'Our new zine just landed for patrons! Featuring recipes, hosting rituals, and our June flavor palette.',
-    icon: <Flame className='w-6 h-6 text-brand-secondary' />,
+    desc: 'Now live for patrons — flavor theory, rituals, and real ones only.',
+    icon: <Flame className='w-6 h-6 text-brand-charcoalTeal' />,
   },
   {
-    title: 'Custom Board Preorders Open',
-    desc: 'Now accepting limited custom orders for Pride Week! Local pickup and delivery available.',
-    icon: <UtensilsCrossed className='w-6 h-6 text-brand-secondary' />,
+    title: 'Pride Boards Now Booking',
+    desc: 'Bright, bold, and balanced. Preorder for your June table now.',
+    icon: <UtensilsCrossed className='w-6 h-6 text-brand-charcoalTeal' />,
   },
 ];
 
@@ -61,137 +61,93 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Theatrical Table | A Third Space for Boards, Brews & Belonging</title>
+        <title>Dramatis | Everyday Rituals, Seasonal Spreads, Community Magic</title>
         <meta
           name='description'
-          content='Welcome to Theatrical Table — your cozy third space for charcuterie boards, coffee, game nights, and seasonal subscriptions. Come sit with us.'
+          content='Dramatis is your local lifestyle club rooted in ritual, theater, and togetherness. Services, spreads, and events — all designed with care in Long Beach, CA.'
         />
-        <link rel='canonical' href='https://theatricaltable.com/' />
+        <link rel='canonical' href='https://dramatis.club/' />
         <meta
           property='og:title'
-          content='Theatrical Table | A Third Space for Boards, Brews & Belonging'
+          content='Dramatis | Everyday Rituals, Seasonal Spreads, Community Magic'
         />
         <meta
           property='og:description'
-          content='Join us for grazing boards, curated events, and cozy community vibes inspired by coffee, board games, and the light side of the Force.'
+          content='Curated services and gatherings designed to nourish your life and your table. Join us in Long Beach.'
         />
-        <meta property='og:image' content='/assets/theatrical-og-image.jpg' />
-        <meta property='og:url' content='https://theatricaltable.com/' />
+        <meta property='og:image' content='/assets/dramatis-og-image.jpg' />
+        <meta property='og:url' content='https://dramatis.club/' />
         <meta name='twitter:card' content='summary_large_image' />
-        <script type='application/ld+json'>
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Theatrical Table',
-            url: 'https://theatricaltable.com/',
-            logo: 'https://theatricaltable.com/assets/theatrical-og-image.jpg',
-            image: 'https://theatricaltable.com/assets/theatrical-og-image.jpg',
-            description:
-              'Theatrical Table is a cozy third space offering curated grazing boards, immersive game nights, coffee culture, and lifestyle subscriptions.',
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Long Beach',
-              addressRegion: 'CA',
-              addressCountry: 'US',
-            },
-            sameAs: [
-              'https://instagram.com/theatricaltable',
-              'https://patreon.com/theatricaltable',
-            ],
-            openingHoursSpecification: {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Monday', 'Wednesday', 'Friday', 'Saturday'],
-              opens: '10:00',
-              closes: '22:00',
-            },
-          })}
-        </script>
-
-        <script type='application/ld+json'>
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Event',
-            name: 'Friday Game Night',
-            startDate: '2025-05-30T19:00:00-07:00',
-            eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-            eventStatus: 'https://schema.org/EventScheduled',
-            location: {
-              '@type': 'Place',
-              name: 'Theatrical Table',
-              address: {
-                '@type': 'PostalAddress',
-                addressLocality: 'Long Beach',
-                addressRegion: 'CA',
-                addressCountry: 'US',
-              },
-            },
-            image: ['https://theatricaltable.com/assets/game-night-preview.jpg'],
-            description:
-              'Join us for our Friday Game Night — with curated grazing bites, cozy community, and cards on the table.',
-            offers: {
-              '@type': 'Offer',
-              url: 'https://theatricaltable.com/events',
-              price: '0',
-              priceCurrency: 'USD',
-              availability: 'https://schema.org/InStock',
-            },
-            performer: {
-              '@type': 'PerformingGroup',
-              name: 'Theatrical Table Crew',
-            },
-          })}
-        </script>
       </Helmet>
 
       <div className='bg-brand-light text-brand-dark font-body'>
-        {/* Hero */}
-        <section className='min-h-[75vh] flex flex-col items-center justify-center text-center px-6 py-20'>
-          <motion.h1
-            className='text-4xl md:text-6xl font-display font-bold text-brand-primary mb-4'
-            initial='hidden'
-            animate='visible'
-            variants={fadeInUp}>
-            Welcome to Theatrical Table
-          </motion.h1>
-          <motion.p
-            className='max-w-2xl text-lg text-neutral-800 mb-6'
-            initial='hidden'
-            animate='visible'
-            custom={2}
-            variants={fadeInUp}>
-            A cozy third space where food meets play, and stories are shared over charcuterie and
-            coffee. We host gatherings that nourish the senses and spark connection — all with a
-            touch of theatrical flair.
-          </motion.p>
-          <motion.div initial='hidden' animate='visible' custom={3} variants={fadeInUp}>
-            <Link
-              to='/boards'
-              className='inline-flex items-center gap-2 px-6 py-3 bg-brand-primary text-white rounded-xl font-medium hover:bg-brand-dark transition'>
-              Explore Our Boards <Sparkles className='w-4 h-4' />
-            </Link>
-          </motion.div>
+        <section className='relative min-h-[80vh] flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden'>
+          <div className='absolute inset-0 bg-[url("/assets/hero-hands.jpg")] bg-cover bg-center opacity-20'></div>
+          <div className='relative z-10 max-w-3xl'>
+            <motion.span
+              className='block uppercase text-sm tracking-widest text-brand-mulberry font-semibold mb-3'
+              initial='hidden'
+              animate='visible'
+              variants={fadeInUp}>
+              Curated support. Communal magic.
+            </motion.span>
+            <motion.h1
+              className='text-4xl md:text-6xl font-display font-bold text-brand-rosewood mb-6'
+              initial='hidden'
+              animate='visible'
+              variants={fadeInUp}>
+              Welcome to Dramatis
+            </motion.h1>
+            <motion.p
+              className='text-lg text-neutral-800 font-body mb-8'
+              initial='hidden'
+              animate='visible'
+              custom={2}
+              variants={fadeInUp}>
+              A third-space lifestyle brand rooted in seasonal care, gatherings, and the charm of
+              something extra. We’re not the main act — we’re the scene change.
+            </motion.p>
+            <motion.div
+              className='flex flex-col sm:flex-row justify-center gap-4'
+              initial='hidden'
+              animate='visible'
+              custom={3}
+              variants={fadeInUp}>
+              <Link
+                to='/services'
+                className='inline-block px-6 py-3 rounded-xl bg-brand-rosewood text-white font-medium hover:bg-brand-dark transition'>
+                Explore Services
+              </Link>
+              <a
+                href='https://patreon.com/theatricaltable'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-block px-6 py-3 rounded-xl border-2 border-brand-mulberry text-brand-mulberry font-medium hover:bg-brand-mulberry hover:text-white transition'>
+                Join the Club
+              </a>
+            </motion.div>
+          </div>
         </section>
 
-        {/* Feature Cards */}
         <section className='grid gap-8 px-6 pb-20 md:grid-cols-3 max-w-7xl mx-auto'>
           {[
             {
-              title: 'Grazing Boards & Boxes',
-              icon: <ShoppingBasket className='w-8 h-8 text-brand-secondary' />,
-              desc: 'Artfully arranged bites designed to delight — from date nights to celebrations, each board is a feast for the senses.',
-              to: '/boards',
+              title: 'The Spread',
+              icon: <ShoppingBasket className='w-8 h-8 text-brand-charcoalTeal' />,
+              desc: 'Boards, boxes, and seasonal menus. Made to share, styled to impress.',
+              to: '/spread',
             },
             {
-              title: 'Themed Events & Nights',
-              icon: <CalendarHeart className='w-8 h-8 text-brand-secondary' />,
-              desc: 'From MTG to gin tastings and board game socials, our events are made to connect and enchant — no costumes required (but they’re welcome).',
+              title: 'Events with Heart',
+              icon: <CalendarHeart className='w-8 h-8 text-brand-charcoalTeal' />,
+              desc: 'From salons to mixers, our gatherings are story-driven and snack-forward.',
               to: '/events',
             },
             {
-              title: 'Subscription Magic',
-              icon: <Sparkles className='w-8 h-8 text-brand-secondary' />,
-              desc: 'Join our Patreon to get zines, seasonal guides, and early access to curated experiences — it’s like a love letter in your inbox.',
-              to: '/subscribe',
+              title: 'Membership Magic',
+              icon: <Sparkles className='w-8 h-8 text-brand-charcoalTeal' />,
+              desc: 'Get zines, invites, and priority booking — perks with personality.',
+              to: '/club',
             },
           ].map((card, i) => (
             <motion.div
@@ -202,23 +158,22 @@ function Home() {
               animate='visible'
               variants={fadeInUp}>
               <div className='mb-4'>{card.icon}</div>
-              <h3 className='font-display text-xl font-semibold mb-2 text-brand-primary'>
+              <h3 className='font-display text-xl font-semibold mb-2 text-brand-rosewood'>
                 {card.title}
               </h3>
               <p className='text-sm text-neutral-800 mb-4'>{card.desc}</p>
               <Link
                 to={card.to}
-                className='text-brand-secondary underline underline-offset-4 hover:text-brand-primary transition'>
+                className='text-brand-charcoalTeal underline underline-offset-4 hover:text-brand-rosewood transition'>
                 Learn More →
               </Link>
             </motion.div>
           ))}
         </section>
 
-        {/* What's Happening This Week */}
         <section className='max-w-3xl mx-auto px-6 py-16 text-center'>
-          <h2 className='text-3xl font-display font-semibold text-brand-primary mb-6'>
-            What’s Happening This Week
+          <h2 className='text-3xl font-display font-semibold text-brand-rosewood mb-6'>
+            This Week at Dramatis
           </h2>
 
           <div
@@ -234,7 +189,7 @@ function Home() {
                 transition={{ duration: 0.6, ease: 'easeOut' }}
                 className='absolute inset-0 flex flex-col justify-center items-center bg-white shadow-card rounded-2xl px-8 py-6 text-center'>
                 <div className='mb-3'>{carouselItems[carouselIndex].icon}</div>
-                <h3 className='text-xl font-display font-semibold text-brand-primary mb-1'>
+                <h3 className='text-xl font-display font-semibold text-brand-rosewood mb-1'>
                   {carouselItems[carouselIndex].title}
                 </h3>
                 <p className='text-sm text-neutral-800 max-w-sm'>
@@ -243,23 +198,22 @@ function Home() {
               </motion.div>
             </AnimatePresence>
 
-            {/* Nav Controls */}
             <div className='absolute inset-y-0 left-0 flex items-center'>
               <button
                 onClick={() =>
                   setCarouselIndex((prev) => (prev === 0 ? carouselItems.length - 1 : prev - 1))
                 }
-                className='bg-white shadow rounded-full p-2 hover:bg-brand-secondary/20 transition'
+                className='bg-white shadow rounded-full p-2 hover:bg-brand-charcoalTeal/20 transition'
                 aria-label='Previous slide'>
-                <ChevronLeft className='w-5 h-5 text-brand-primary' />
+                <ChevronLeft className='w-5 h-5 text-brand-rosewood' />
               </button>
             </div>
             <div className='absolute inset-y-0 right-0 flex items-center'>
               <button
                 onClick={() => setCarouselIndex((prev) => (prev + 1) % carouselItems.length)}
-                className='bg-white shadow rounded-full p-2 hover:bg-brand-secondary/20 transition'
+                className='bg-white shadow rounded-full p-2 hover:bg-brand-charcoalTeal/20 transition'
                 aria-label='Next slide'>
-                <ChevronRight className='w-5 h-5 text-brand-primary' />
+                <ChevronRight className='w-5 h-5 text-brand-rosewood' />
               </button>
             </div>
           </div>

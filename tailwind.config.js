@@ -4,22 +4,26 @@ export default {
     extend: {
       colors: {
         brand: {
-          primary: '#984062', // Deep magenta - theatrical accent
-          secondary: '#C29B30', // Creamy yellow - warmth and accessibility
-          dark: '#2d1b25', // Optional deep background color
-          light: '#fffaf0', // Optional light section background
+          rosewood: '#984062', // Rosewood / Dark Raspberry
+          mulberry: '#7E4A5F', // Rich mauve-burgundy, still soft but clearly different from rosewood
+          aqua: '#A8F9FF', // Icy Aqua / Frosted Cyan
+          buttercream: '#FAF2A1', // Light Buttercream / Pale Maize
+          indigo: '#5863F8', // Electric Indigo / Ultrablue
+          lavenderGray: '#A09EBB', // Lavender Gray / Dusty Periwinkle
+          mist: '#CECAFA', // Lavender Mist / Iris Whisper
+          charcoalTeal: '#12303B', // Charcoal Teal / Deep Sea
+          pine: '#1B7B4E', // Verdant Pine / Botanical Emerald
         },
         neutral: {
           900: '#1c1c1e',
           800: '#2e2e2e',
           100: '#f7f7f5',
         },
-        emerald: '#42675a', // Optional calming green for recipes/game night
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'serif'],
-        body: ['"Inter"', 'sans-serif'],
-        fancy: ['"Libre Bodoni"', '"serif"'], // Extra drama option
+        heading: ['Montserrat', 'sans-serif'], // Futura analog
+        body: ['"Crimson Pro"', 'serif'], // Palatino analog
+        quote: ['"Playfair Display"', 'serif'], // Didot italic analog
       },
       boxShadow: {
         card: '0 4px 12px rgba(0, 0, 0, 0.06)',

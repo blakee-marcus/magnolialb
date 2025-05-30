@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { Sparkles, Coffee, HandHeart, Gamepad2, Sun, Users } from 'lucide-react';
+import { Sparkles, Coffee, Gamepad2, Sun, Users } from 'lucide-react';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -15,27 +15,27 @@ const fadeIn = {
 const values = [
   {
     title: 'A Third Space for All',
-    icon: <Users className='w-7 h-7 text-brand-secondary' />,
+    icon: <Users className='w-7 h-7 text-brand-buttercream' />,
     description:
-      'Not home, not work — just a cozy, creative in-between. We’re crafting a space where you can snack, sip, laugh, and feel like you belong.',
+      'More than a venue — this is your community intermission. A cozy in-between where laughter lingers, ideas steep like tea, and the table is always set for one more.',
   },
   {
-    title: 'Fueled by Coffee & Curiosity',
-    icon: <Coffee className='w-7 h-7 text-brand-secondary' />,
+    title: 'Brewed with Intention',
+    icon: <Coffee className='w-7 h-7 text-brand-buttercream' />,
     description:
-      'We believe every great idea (and every epic game move) starts with a good cup of coffee. Ritual meets energy in every offering.',
+      'We serve ritual by the cup. Each pour fuels connection, each sip sparks curiosity. Whether espresso or herbal, your mug means more here.',
   },
   {
     title: 'Play is Sacred',
-    icon: <Gamepad2 className='w-7 h-7 text-brand-secondary' />,
+    icon: <Gamepad2 className='w-7 h-7 text-brand-buttercream' />,
     description:
-      'From MTG to board game socials, we design events that foster joy, imagination, and community. There’s always room at the table.',
+      'Strategy, silliness, storytelling — we host it all. From tabletop tales to spontaneous joy, gameplay is our heartbeat and every guest is a main character.',
   },
   {
-    title: 'Guided by the Light',
-    icon: <Sun className='w-7 h-7 text-brand-secondary' />,
+    title: 'Drawn to the Light',
+    icon: <Sun className='w-7 h-7 text-brand-buttercream' />,
     description:
-      'We’re here to uplift — through warmth, transparency, inclusion, and a little bit of sparkle. Hope and harmony are baked into everything we do.',
+      'We orbit around optimism. Built on care and creativity, Dramatis channels the warm glow of belonging and believes in brighter tomorrows.',
   },
 ];
 
@@ -43,16 +43,16 @@ function About() {
   return (
     <div className='bg-brand-light text-brand-dark font-body px-6 py-20 space-y-24'>
       <Helmet>
-        <title>About Us | Theatrical Table – A Third Space for Boards & Belonging</title>
+        <title>About Us | Dramatis – A Third Space for Boards & Belonging</title>
         <meta
           name='description'
-          content='Learn the story behind Theatrical Table — a cozy third space blending grazing boards, coffee, and game nights with theatrical flair and community warmth.'
+          content='Learn the story behind Dramatis — a cozy third space blending grazing boards, coffee, and game nights with theatrical flair and community warmth.'
         />
         <link rel='canonical' href='https://theatricaltable.com/about' />
-        <meta property='og:title' content='About Theatrical Table' />
+        <meta property='og:title' content='About Dramatis' />
         <meta
           property='og:description'
-          content='Theatrical Table is more than a food brand — it’s a space for connection, creativity, and joy. Discover our values and origin.'
+          content='Dramatis is more than a food brand — it’s a space for connection, creativity, and joy. Discover our values and origin.'
         />
         <meta property='og:image' content='/assets/theatrical-og-image.jpg' />
         <meta property='og:url' content='https://theatricaltable.com/about' />
@@ -61,11 +61,11 @@ function About() {
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
-            name: 'Theatrical Table',
+            name: 'Dramatis',
             url: 'https://theatricaltable.com/about',
             logo: 'https://theatricaltable.com/assets/theatrical-og-image.jpg',
             description:
-              'Theatrical Table is a third-space lifestyle brand built on a love of charcuterie, coffee, community, and connection through game nights and immersive events.',
+              'Dramatis is a third-space lifestyle brand built on a love of charcuterie, coffee, community, and connection through game nights and immersive events.',
             sameAs: [
               'https://instagram.com/theatricaltable',
               'https://patreon.com/theatricaltable',
@@ -89,13 +89,12 @@ function About() {
         animate='visible'
         variants={fadeIn}
         className='text-center max-w-3xl mx-auto'>
-        <h1 className='text-4xl md:text-5xl font-display font-bold text-brand-primary mb-4'>
+        <h1 className='text-4xl md:text-5xl font-display font-bold text-brand-rosewood mb-4'>
           Our Story
         </h1>
         <p className='text-lg text-neutral-800'>
-          Theatrical Table was born from a love of food, games, coffee, and connection. Part
-          charcuterie studio, part event space, part community hideaway — we’re building a third
-          space that feels like coming home to something new.
+          Welcome to Dramatis — where every graze, pour, and play invites you into a world of
+          flavor, imagination, and belonging. We’re not just hosting guests. We’re hosting scenes.
         </p>
       </motion.div>
 
@@ -111,7 +110,7 @@ function About() {
             variants={fadeIn}
             className='bg-white shadow-card rounded-2xl p-6 text-center'>
             <div className='mb-3 flex justify-center'>{value.icon}</div>
-            <h2 className='font-display text-xl font-semibold text-brand-primary mb-2'>
+            <h2 className='font-display text-xl font-semibold text-brand-rosewood mb-2'>
               {value.title}
             </h2>
             <p className='text-sm text-neutral-800'>{value.description}</p>
@@ -126,13 +125,12 @@ function About() {
         viewport={{ once: true }}
         variants={fadeIn}
         className='max-w-4xl mx-auto text-center'>
-        <h2 className='text-3xl font-display text-brand-primary mb-4'>Come Sit With Us</h2>
+        <h2 className='text-3xl font-display text-brand-rosewood mb-4'>Take a Seat</h2>
         <p className='text-neutral-800 max-w-2xl mx-auto mb-8'>
-          Whether you’re here for a custom grazing board, a game night, or a good conversation over
-          coffee — you’re welcome here. We’re honored to be part of your story, and we can’t wait to
-          share ours with you.
+          Whether you’re sipping, snacking, or storytelling — your place at the table is already
+          set. Let’s gather around something beautiful.
         </p>
-        <Sparkles className='w-8 h-8 text-brand-secondary mx-auto animate-sparkle' />
+        <Sparkles className='w-8 h-8 text-brand-buttercream mx-auto animate-sparkle' />
       </motion.div>
     </div>
   );
