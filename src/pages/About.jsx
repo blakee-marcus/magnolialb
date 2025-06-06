@@ -15,25 +15,25 @@ const fadeIn = {
 const values = [
   {
     title: 'A Third Space for All',
-    icon: <Users className='w-7 h-7 text-brand-buttercream' />,
+    icon: <Users className='w-7 h-7 text-brand-buttercream' aria-hidden='true' />,
     description:
       'More than a venue — this is your community intermission. A cozy in-between where laughter lingers, ideas steep like tea, and the table is always set for one more.',
   },
   {
     title: 'Brewed with Intention',
-    icon: <Coffee className='w-7 h-7 text-brand-buttercream' />,
+    icon: <Coffee className='w-7 h-7 text-brand-buttercream' aria-hidden='true' />,
     description:
       'We serve ritual by the cup. Each pour fuels connection, each sip sparks curiosity. Whether espresso or herbal, your mug means more here.',
   },
   {
     title: 'Play is Sacred',
-    icon: <Gamepad2 className='w-7 h-7 text-brand-buttercream' />,
+    icon: <Gamepad2 className='w-7 h-7 text-brand-buttercream' aria-hidden='true' />,
     description:
       'Strategy, silliness, storytelling — we host it all. From tabletop tales to spontaneous joy, gameplay is our heartbeat and every guest is a main character.',
   },
   {
     title: 'Drawn to the Light',
-    icon: <Sun className='w-7 h-7 text-brand-buttercream' />,
+    icon: <Sun className='w-7 h-7 text-brand-buttercream' aria-hidden='true' />,
     description:
       'We orbit around optimism. Built on care and creativity, Dramatis channels the warm glow of belonging and believes in brighter tomorrows.',
   },
@@ -41,7 +41,7 @@ const values = [
 
 function About() {
   return (
-    <div className='bg-brand-light text-brand-dark font-body px-6 py-20 space-y-24'>
+    <div className='bg-neutral-100 text-neutral-900 font-body px-6 py-20 space-y-24'>
       <Helmet>
         <title>About Us | Dramatis – A Third Space for Boards & Belonging</title>
         <meta
@@ -54,7 +54,10 @@ function About() {
           property='og:description'
           content='Dramatis is more than a food brand — it’s a space for connection, creativity, and joy. Discover our values and origin.'
         />
-        <meta property='og:image' content='/assets/theatrical-og-image.jpg' />
+        <meta
+          property='og:image'
+          content='https://magnolialb.vercel.app/assets/dramatis-og-image.png'
+        />
         <meta property='og:url' content='https://theatricaltable.com/about' />
         <meta name='twitter:card' content='summary_large_image' />
         <script type='application/ld+json'>
@@ -63,7 +66,7 @@ function About() {
             '@type': 'Organization',
             name: 'Dramatis',
             url: 'https://theatricaltable.com/about',
-            logo: 'https://theatricaltable.com/assets/theatrical-og-image.jpg',
+            logo: 'https://magnolialb.vercel.app/assets/dramatis-og-image.png',
             description:
               'Dramatis is a third-space lifestyle brand built on a love of charcuterie, coffee, community, and connection through game nights and immersive events.',
             sameAs: [
@@ -108,12 +111,12 @@ function About() {
             whileInView='visible'
             viewport={{ once: true }}
             variants={fadeIn}
-            className='bg-white shadow-card rounded-2xl p-6 text-center'>
+            className='bg-white shadow-card rounded-2xl px-6 py-8 text-center'>
             <div className='mb-3 flex justify-center'>{value.icon}</div>
             <h2 className='font-display text-xl font-semibold text-brand-rosewood mb-2'>
               {value.title}
             </h2>
-            <p className='text-sm text-neutral-800'>{value.description}</p>
+            <p className='text-sm text-neutral-900'>{value.description}</p>
           </motion.div>
         ))}
       </section>
@@ -130,7 +133,10 @@ function About() {
           Whether you’re sipping, snacking, or storytelling — your place at the table is already
           set. Let’s gather around something beautiful.
         </p>
-        <Sparkles className='w-8 h-8 text-brand-buttercream mx-auto animate-sparkle' />
+        <Sparkles
+          className='w-8 h-8 text-brand-buttercream mx-auto animate-sparkle'
+          aria-hidden='true'
+        />
       </motion.div>
     </div>
   );

@@ -227,6 +227,18 @@ function Services() {
           name='description'
           content='Explore Dramatis lifestyle services — from meal prep to mobile bartending, from laundry to life rituals. Your crew awaits.'
         />
+        <link rel='canonical' href='https://dramatis.club/services' />
+        <meta property='og:title' content='The Crew | Dramatis Services' />
+        <meta
+          property='og:description'
+          content='Lifestyle services for modern rituals — from light cleaning to charcuterie staging. Browse offerings and book your crew.'
+        />
+        <meta
+          property='og:image'
+          content='https://magnolialb.vercel.app/assets/dramatis-og-image.png'
+        />
+        <meta property='og:url' content='https://dramatis.club/services' />
+        <meta name='twitter:card' content='summary_large_image' />
       </Helmet>
 
       <h1 className='text-4xl font-display font-bold text-brand-rosewood mb-6 text-center'>
@@ -267,6 +279,7 @@ function Services() {
           Includes 30 min round-trip travel. Additional billed at $10 per 15 min.
         </p>
       </div>
+
       <div className='mt-24 space-y-20'>
         {categories.map((cat) => (
           <section key={cat.anchor} id={cat.anchor}>

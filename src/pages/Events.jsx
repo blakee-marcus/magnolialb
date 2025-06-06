@@ -34,7 +34,7 @@ const upcomingIdeas = [
 
 function Events() {
   return (
-    <div className='bg-brand-light text-brand-dark font-body px-6 py-20 space-y-24'>
+    <div className='bg-neutral-100 text-neutral-900 font-body px-6 py-20 space-y-24'>
       <Helmet>
         <title>Events | Dramatis</title>
         <meta
@@ -50,9 +50,13 @@ function Events() {
           property='og:description'
           content='Join the Dramatis Club and access immersive events crafted for creative connection. Part speakeasy, part story circle, always delicious.'
         />
-        <meta property='og:image' content='https://theatricaltable.com/og-events.jpg' />
+        <meta
+          property='og:image'
+          content='https://magnolialb.vercel.app/assets/dramatis-og-image.png'
+        />
         <meta property='og:url' content='https://theatricaltable.com/events' />
         <link rel='canonical' href='https://theatricaltable.com/events' />
+        <meta name='twitter:card' content='summary_large_image' />
       </Helmet>
 
       {/* Hero Section */}
@@ -72,8 +76,8 @@ function Events() {
           href={patreonLink}
           target='_blank'
           rel='noopener noreferrer'
-          className='inline-flex items-center gap-2 px-6 py-3 bg-brand-rosewood text-white rounded-xl font-medium hover:bg-brand-dark transition'>
-          Join the Club <ExternalLink className='w-4 h-4' />
+          className='inline-flex items-center gap-2 px-6 py-3 bg-brand-rosewood text-white rounded-xl font-medium hover:bg-neutral-900 transition'>
+          Join the Club <ExternalLink className='w-4 h-4' aria-hidden='true' />
         </a>
       </motion.div>
 
@@ -142,8 +146,8 @@ function Events() {
           href={patreonLink}
           target='_blank'
           rel='noopener noreferrer'
-          className='inline-flex items-center gap-2 px-6 py-3 bg-brand-rosewood text-white rounded-xl font-medium hover:bg-brand-dark transition'>
-          Join the Club <Sparkles className='w-4 h-4' />
+          className='inline-flex items-center gap-2 px-6 py-3 bg-brand-rosewood text-white rounded-xl font-medium hover:bg-neutral-900 transition'>
+          Join the Club <Sparkles className='w-4 h-4' aria-hidden='true' />
         </a>
         <p className='text-xs text-neutral-600 mt-2'>
           Already a member? Check Patreon for your next RSVP.

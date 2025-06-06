@@ -75,12 +75,15 @@ function Home() {
           property='og:description'
           content='Curated services and gatherings designed to nourish your life and your table. Join us in Long Beach.'
         />
-        <meta property='og:image' content='/assets/dramatis-og-image.jpg' />
+        <meta
+          property='og:image'
+          content='https://magnolialb.vercel.app/assets/dramatis-og-image.png'
+        />
         <meta property='og:url' content='https://dramatis.club/' />
         <meta name='twitter:card' content='summary_large_image' />
       </Helmet>
 
-      <div className='bg-brand-light text-brand-dark font-body'>
+      <div className='bg-neutral-100 text-neutral-900 font-body'>
         <section className='relative min-h-[80vh] flex flex-col items-center justify-center text-center px-6 py-24 overflow-hidden'>
           <div className='absolute inset-0 bg-[url("/assets/hero-hands.jpg")] bg-cover bg-center opacity-20'></div>
           <div className='relative z-10 max-w-3xl'>
@@ -115,7 +118,7 @@ function Home() {
               variants={fadeInUp}>
               <Link
                 to='/services'
-                className='inline-block px-6 py-3 rounded-xl bg-brand-rosewood text-white font-medium hover:bg-brand-dark transition'>
+                className='inline-block px-6 py-3 rounded-xl bg-brand-rosewood text-white font-medium hover:bg-neutral-900 transition'>
                 Explore Services
               </Link>
               <a

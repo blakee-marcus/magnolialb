@@ -24,12 +24,12 @@ const patreonLink = 'https://www.patreon.com/theatricaltable?subscribed=true';
 const tiers = [
   {
     name: 'Opening Night',
-    icon: <Star className='w-6 h-6 text-brand-buttercream' />,
+    icon: <Star className='w-6 h-6 text-brand-buttercream' aria-hidden='true' />,
     features: ['Monthly DIY recipe zine', 'Event pre-sales access', 'Curated shopping lists'],
   },
   {
     name: 'Headliner',
-    icon: <Ticket className='w-6 h-6 text-brand-buttercream' />,
+    icon: <Ticket className='w-6 h-6 text-brand-buttercream' aria-hidden='true' />,
     features: [
       'All Opening Night perks',
       'Free local delivery on boards',
@@ -38,7 +38,7 @@ const tiers = [
   },
   {
     name: 'Encore Club',
-    icon: <Crown className='w-6 h-6 text-brand-buttercream' />,
+    icon: <Crown className='w-6 h-6 text-brand-buttercream' aria-hidden='true' />,
     features: [
       'All Headliner perks',
       'Early tastings of new offerings',
@@ -59,7 +59,7 @@ function Club() {
   }, [searchParams]);
 
   return (
-    <div className='bg-brand-light text-brand-dark font-body px-6 py-20 space-y-28'>
+    <div className='bg-neutral-100 text-neutral-900 font-body px-6 py-20 space-y-28'>
       <ThankYouModal isOpen={showModal} onClose={() => setShowModal(false)} />
       <Helmet>
         <title>Join the Club | Dramatis Membership Tiers</title>
@@ -73,7 +73,10 @@ function Club() {
           property='og:description'
           content='Step behind the curtain and into the heart of Dramatis. Exclusive perks, immersive moments, and a seat at the table await.'
         />
-        <meta property='og:image' content='https://theatricaltable.com/og-subscribe.jpg' />
+        <meta
+          property='og:image'
+          content='https://magnolialb.vercel.app/assets/dramatis-og-image.png'
+        />
         <meta property='og:url' content='https://theatricaltable.com/subscribe' />
         <meta name='twitter:card' content='summary_large_image' />
       </Helmet>
@@ -95,8 +98,8 @@ function Club() {
           href={patreonLink}
           target='_blank'
           rel='noopener noreferrer'
-          className='inline-flex items-center gap-2 mt-6 px-6 py-3 bg-brand-rosewood text-white rounded-xl font-medium hover:bg-brand-dark transition'>
-          Join Us on Patreon <ExternalLink className='w-4 h-4' />
+          className='inline-flex items-center gap-2 mt-6 px-6 py-3 bg-brand-rosewood text-white rounded-xl font-medium hover:bg-neutral-900 transition'>
+          Join Us on Patreon <ExternalLink className='w-4 h-4' aria-hidden='true' />
         </a>
       </motion.div>
 
@@ -108,9 +111,9 @@ function Club() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: 'easeOut' }}>
           <div className='flex justify-center mb-2'>
-            <Users className='w-6 h-6 text-brand-rosewood' />
+            <Users className='w-6 h-6 text-brand-rosewood' aria-hidden='true' />
           </div>
-          <p className='text-lg font-medium text-brand-dark'>
+          <p className='text-lg font-medium text-neutral-900'>
             ✨ <span className='font-bold'>150+ patrons</span> have already taken their seat. Ready
             for yours?
           </p>
@@ -131,7 +134,7 @@ function Club() {
             <h2 className='font-display text-2xl font-semibold text-brand-rosewood mb-2'>
               {tier.name}
             </h2>
-            <ul className='text-sm text-neutral-800 mb-4 space-y-2'>
+            <ul className='text-sm text-neutral-900 mb-4 space-y-2'>
               {tier.features.map((feature) => (
                 <li key={feature}>• {feature}</li>
               ))}
@@ -187,8 +190,8 @@ function Club() {
           href={patreonLink}
           target='_blank'
           rel='noopener noreferrer'
-          className='inline-flex items-center gap-2 px-6 py-3 bg-brand-rosewood text-white rounded-xl font-medium hover:bg-brand-dark transition'>
-          Join Us on Patreon <ExternalLink className='w-4 h-4' />
+          className='inline-flex items-center gap-2 px-6 py-3 bg-brand-rosewood text-white rounded-xl font-medium hover:bg-neutral-900 transition'>
+          Join Us on Patreon <ExternalLink className='w-4 h-4' aria-hidden='true' />
         </a>
       </div>
     </div>

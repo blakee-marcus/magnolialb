@@ -16,9 +16,13 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className='min-h-screen bg-brand-light text-brand-dark font-body'>
+        <div className='min-h-screen bg-neutral-100 text-neutral-900 font-body'>
           <NavBar />
-          <main className='pt-20 px-4 md:px-8 lg:px-16'>
+          <main
+            role='main'
+            aria-label='Main content'
+            className='pt-20 px-4 md:px-8 lg:px-16'
+          >
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/events' element={<Events />} />

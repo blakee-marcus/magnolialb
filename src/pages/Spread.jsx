@@ -35,6 +35,19 @@ function Spread() {
           name='description'
           content='Showstopping grazing experiences designed for drama, delight, and delicious detail. Handmade and styled by Dramatis.'
         />
+        <link rel='canonical' href='https://dramatis.club/spread' />
+        <meta property='og:title' content='The Spread | Dramatis Grazing Boards' />
+        <meta
+          property='og:description'
+          content='Not just food — a curated edible scene. Book a handmade, styled grazing board for brunches, birthdays, and gatherings of all sizes.'
+        />
+        <meta
+          property='og:image'
+          content='https://magnolialb.vercel.app/assets/dramatis-og-image.png'
+        />
+        <meta property='og:url' content='https://dramatis.club/spread' />
+        <meta property='og:type' content='website' />
+        <meta name='twitter:card' content='summary_large_image' />
       </Helmet>
 
       <section className='text-center max-w-3xl mx-auto'>
