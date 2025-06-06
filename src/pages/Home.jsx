@@ -79,6 +79,10 @@ function Home() {
           property='og:image'
           content='https://magnolialb.vercel.app/assets/dramatis-og-image.png'
         />
+        <meta property='og:image:type' content='image/png' />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
+
         <meta property='og:url' content='https://dramatis.club/' />
         <meta name='twitter:card' content='summary_large_image' />
       </Helmet>
