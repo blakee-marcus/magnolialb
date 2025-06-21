@@ -1,8 +1,9 @@
-import React from 'react';
+'use client';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 
-function ThankYouModal({ isOpen, onClose }) {
+export default function ThankYouModal({ isOpen, onClose }) {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -45,5 +46,3 @@ function ThankYouModal({ isOpen, onClose }) {
     </AnimatePresence>
   );
 }
-
-export default ThankYouModal;

@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://theatricaltable.com/sitemap.xml
