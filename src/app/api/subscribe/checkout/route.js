@@ -33,7 +33,7 @@ export async function POST(req) {
       phone_number_collection: {
         enabled: true,
       },
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/subscribe?subscribed=true`,
+      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/thankyou`,
       cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/subscribe`,
     });
 

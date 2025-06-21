@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
 import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -48,15 +47,6 @@ const tiers = [
 ];
 
 export default function ClubPage() {
-  const [showModal, setShowModal] = useState(false);
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    if (searchParams.get('subscribed') === 'true') {
-      setShowModal(true);
-    }
-  }, [searchParams]);
-
   return (
     <>
       <Head>
@@ -125,8 +115,6 @@ export default function ClubPage() {
       </Head>
 
       <div className='text-neutral-900 font-body px-6 py-20 space-y-28'>
-        <ThankYouModal isOpen={showModal} onClose={() => setShowModal(false)} />
-
         {/* Hero */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
