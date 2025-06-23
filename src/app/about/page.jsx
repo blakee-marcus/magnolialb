@@ -53,7 +53,7 @@ export default function About() {
           name='keywords'
           content='Dramatis, third space, Long Beach coffee shop, charcuterie, game nights, community events, grazing boards, creative spaces'
         />
-        <link rel='canonical' href='https://magnolialb.vercel.app/about' />
+        <link rel='canonical' href='https://www.dramatis.us/about' />
 
         {/* Open Graph */}
         <meta property='og:type' content='website' />
@@ -67,9 +67,9 @@ export default function About() {
         />
         <meta
           property='og:image'
-          content='https://magnolialb.vercel.app/images/dramatis-og-image.png'
+          content='https://www.dramatis.us/images/dramatis-og-image.png'
         />
-        <meta property='og:url' content='https://magnolialb.vercel.app/about' />
+        <meta property='og:url' content='https://www.dramatis.us/about' />
         <meta property='og:site_name' content='Dramatis' />
 
         {/* Twitter */}
@@ -84,7 +84,7 @@ export default function About() {
         />
         <meta
           name='twitter:image'
-          content='https://magnolialb.vercel.app/assets/dramatis-og-image.png'
+          content='https://www.dramatis.us/assets/dramatis-og-image.png'
         />
 
         {/* Structured Data */}
@@ -95,9 +95,9 @@ export default function About() {
               '@context': 'https://schema.org',
               '@type': 'CafeOrCoffeeShop',
               name: 'Dramatis',
-              url: 'https://magnolialb.vercel.app',
-              logo: 'https://magnolialb.vercel.app/assets/dramatis-og-image.png',
-              image: 'https://magnolialb.vercel.app/assets/dramatis-og-image.png',
+              url: 'https://www.dramatis.us',
+              logo: 'https://www.dramatis.us/assets/dramatis-og-image.png',
+              image: 'https://www.dramatis.us/assets/dramatis-og-image.png',
               description:
                 'Dramatis is a third-space lifestyle concept in Long Beach offering grazing boards, coffee, games, and immersive events.',
               address: {

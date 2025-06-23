@@ -44,7 +44,7 @@ export default function Spread() {
         />
         <meta
           property='og:image'
-          content='https://magnolialb.vercel.app/assets/dramatis-og-image.png'
+          content='https://www.dramatis.us/assets/dramatis-og-image.png'
         />
         <meta property='og:url' content='https://dramatis.club/spread' />
         <meta property='og:type' content='website' />

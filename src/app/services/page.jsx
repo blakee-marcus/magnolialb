@@ -39,7 +39,7 @@ export default function Services() {
         />
         <meta
           property='og:image'
-          content='https://magnolialb.vercel.app/images/dramatis-og-image.png'
+          content='https://www.dramatis.us/images/dramatis-og-image.png'
         />
         <meta property='og:url' content='https://dramatis.club/services' />
         <meta property='og:site_name' content='Dramatis' />
@@ -53,7 +53,7 @@ export default function Services() {
         />
         <meta
           name='twitter:image'
-          content='https://magnolialb.vercel.app/images/dramatis-og-image.png'
+          content='https://www.dramatis.us/images/dramatis-og-image.png'
         />
 
         {/* Structured Data */}
@@ -65,7 +65,7 @@ export default function Services() {
               '@type': 'LocalBusiness',
               name: 'Dramatis',
               url: 'https://dramatis.club/services',
-              image: 'https://magnolialb.vercel.app/images/dramatis-og-image.png',
+              image: 'https://www.dramatis.us/images/dramatis-og-image.png',
               description:
                 'Dramatis is a lifestyle service provider based in Long Beach offering curated support including light housekeeping, charcuterie styling, mobile bartending, and home rituals.',
               address: {

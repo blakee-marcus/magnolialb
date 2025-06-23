@@ -23,7 +23,7 @@ export default function ThankYouPage() {
           name='description'
           content='Thanks for subscribing to Dramatis. Your membership unlocks zines, perks, events, and handmade moments ahead.'
         />
-        <link rel='canonical' href='https://magnolialb.vercel.app/thankyou' />
+        <link rel='canonical' href='https://www.dramatis.us/thankyou' />
         <meta property='og:title' content='Thank You | Dramatis' />
         <meta
           property='og:description'
@@ -31,9 +31,9 @@ export default function ThankYouPage() {
         />
         <meta
           property='og:image'
-          content='https://magnolialb.vercel.app/images/dramatis-og-image.png'
+          content='https://www.dramatis.us/images/dramatis-og-image.png'
         />
-        <meta property='og:url' content='https://magnolialb.vercel.app/thankyou' />
+        <meta property='og:url' content='https://www.dramatis.us/thankyou' />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
 

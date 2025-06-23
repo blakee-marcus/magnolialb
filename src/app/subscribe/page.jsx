@@ -75,7 +75,7 @@ export default function SubscribePage() {
           name='keywords'
           content='Dramatis membership, subscribe to zines, digital rituals, Long Beach events, community membership, creative subscription, seasonal care kits, ritual templates'
         />
-        <link rel='canonical' href='https://magnolialb.vercel.app/subscribe' />
+        <link rel='canonical' href='https://www.dramatis.us/subscribe' />
 
         {/* Open Graph */}
         <meta property='og:type' content='website' />
@@ -89,9 +89,9 @@ export default function SubscribePage() {
         />
         <meta
           property='og:image'
-          content='https://magnolialb.vercel.app/images/dramatis-og-image.png'
+          content='https://www.dramatis.us/images/dramatis-og-image.png'
         />
-        <meta property='og:url' content='https://magnolialb.vercel.app/subscribe' />
+        <meta property='og:url' content='https://www.dramatis.us/subscribe' />
         <meta property='og:site_name' content='Dramatis' />
 
         {/* Twitter */}
@@ -103,7 +103,7 @@ export default function SubscribePage() {
         />
         <meta
           name='twitter:image'
-          content='https://magnolialb.vercel.app/images/dramatis-og-image.png'
+          content='https://www.dramatis.us/images/dramatis-og-image.png'
         />
 
         {/* Structured Data */}
@@ -114,8 +114,8 @@ export default function SubscribePage() {
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Dramatis',
-              url: 'https://magnolialb.vercel.app/subscribe',
-              logo: 'https://magnolialb.vercel.app/images/dramatis-og-image.png',
+              url: 'https://www.dramatis.us/subscribe',
+              logo: 'https://www.dramatis.us/images/dramatis-og-image.png',
               description:
                 'Dramatis is a creative lifestyle brand offering curated memberships that include zines, rituals, and immersive events in Long Beach and beyond.',
               sameAs: [

@@ -46,7 +46,7 @@ export default function EventsPage() {
           name='keywords'
           content='Dramatis events, Long Beach gatherings, creative salons, immersive events, game night club, charcuterie events, drag shows, MTG events, social experiences, Dramatis Long Beach'
         />
-        <link rel='canonical' href='https://magnolialb.vercel.app/events' />
+        <link rel='canonical' href='https://www.dramatis.us/events' />
 
         {/* Open Graph */}
         <meta property='og:type' content='website' />
@@ -60,9 +60,9 @@ export default function EventsPage() {
         />
         <meta
           property='og:image'
-          content='https://magnolialb.vercel.app/images/dramatis-og-image.png'
+          content='https://www.dramatis.us/images/dramatis-og-image.png'
         />
-        <meta property='og:url' content='https://magnolialb.vercel.app/events' />
+        <meta property='og:url' content='https://www.dramatis.us/events' />
         <meta property='og:site_name' content='Dramatis' />
 
         {/* Twitter */}
@@ -77,7 +77,7 @@ export default function EventsPage() {
         />
         <meta
           name='twitter:image'
-          content='https://magnolialb.vercel.app/images/dramatis-og-image.png'
+          content='https://www.dramatis.us/images/dramatis-og-image.png'
         />
 
         {/* Structured Data */}
@@ -91,7 +91,7 @@ export default function EventsPage() {
               organizer: {
                 '@type': 'Organization',
                 name: 'Dramatis',
-                url: 'https://magnolialb.vercel.app',
+                url: 'https://www.dramatis.us',
               },
               eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
               location: {

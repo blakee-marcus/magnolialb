@@ -21,27 +21,37 @@ const tierVariants = {
 
 const tiers = [
   {
-    name: 'Opening Night',
+    name: 'The Ensemble',
     icon: <Star className='w-6 h-6 text-buttercream' aria-hidden='true' />,
-    features: ['Monthly DIY recipe zine', 'Event pre-sales access', 'Curated shopping lists'],
-  },
-  {
-    name: 'Headliner',
-    icon: <Ticket className='w-6 h-6 text-buttercream' aria-hidden='true' />,
     features: [
-      'All Opening Night perks',
-      'Free local delivery on boards',
-      '1 exclusive game night per month',
+      'Access to Dramatis Discord',
+      'Monthly Digital Zine (PDF or Web)',
+      'Livestream classes (rituals, lessons, etc.)',
+      'Member polls/surveys to shape future content',
+      'Early RSVP for Dramatis-hosted events',
     ],
   },
   {
-    name: 'Encore Club',
+    name: 'The Inner Circle',
+    icon: <Ticket className='w-6 h-6 text-buttercream' aria-hidden='true' />,
+    features: [
+      'Everything in The Ensemble',
+      'Access to DIY Video Vault (mini-lessons)',
+      'Downloadables: ritual templates, mantra cards, mood boards',
+      'Behind-the-scenes planning & seasonal sneak peeks',
+      'Seasonal Spotify playlists & style guides',
+    ],
+  },
+  {
+    name: 'The Lead',
     icon: <Crown className='w-6 h-6 text-buttercream' aria-hidden='true' />,
     features: [
-      'All Headliner perks',
-      'Early tastings of new offerings',
-      'Limited edition board add-ons',
-      'VIP invites to gin nights',
+      'Everything in Inner Circle',
+      'Quarterly Physical Drop (zine, snack, stickers, branded items)',
+      'VIP early booking for high-demand events',
+      'Seasonal gift or mini ritual tool',
+      'Optional credit in Zine or website',
+      'Priority customer service & booking channel',
     ],
   },
 ];
@@ -59,7 +69,7 @@ export default function ClubPage() {
           name='keywords'
           content='Dramatis membership, Long Beach events, charcuterie subscription, game night club, food zines, board styling, gin tastings, local food community'
         />
-        <link rel='canonical' href='https://magnolialb.vercel.app/subscribe' />
+        <link rel='canonical' href='https://https://www.dramatis.us/subscribe' />
 
         {/* Open Graph */}
         <meta property='og:type' content='website' />
@@ -70,9 +80,9 @@ export default function ClubPage() {
         />
         <meta
           property='og:image'
-          content='https://magnolialb.vercel.app/images/dramatis-og-image.png'
+          content='https://https://www.dramatis.us/images/dramatis-og-image.png'
         />
-        <meta property='og:url' content='https://magnolialb.vercel.app/subscribe' />
+        <meta property='og:url' content='https://https://www.dramatis.us/subscribe' />
         <meta property='og:site_name' content='Dramatis' />
 
         {/* Twitter */}
@@ -84,7 +94,7 @@ export default function ClubPage() {
         />
         <meta
           name='twitter:image'
-          content='https://magnolialb.vercel.app/images/dramatis-og-image.png'
+          content='https://https://www.dramatis.us/images/dramatis-og-image.png'
         />
 
         {/* Structured Data */}
@@ -95,8 +105,8 @@ export default function ClubPage() {
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Dramatis',
-              url: 'https://magnolialb.vercel.app',
-              logo: 'https://magnolialb.vercel.app/images/dramatis-og-image.png',
+              url: 'https://https://www.dramatis.us',
+              logo: 'https://https://www.dramatis.us/images/dramatis-og-image.png',
               description:
                 'Dramatis is a Long Beach-based third-space brand offering charcuterie boards, coffee, and a game night membership program filled with curated perks and seasonal experiences.',
               sameAs: [

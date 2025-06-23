@@ -6,9 +6,9 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
 });
 
 const priceMap = {
-  ensemble: 'price_1RcBYVIiDoOB9Sd9GSblhwnA',
-  'inner-circle': 'price_1RcTqlIiDoOB9Sd9pIDs8TxH',
-  lead: 'price_1RcTsBIiDoOB9Sd9QAnsArGd',
+  ensemble: 'price_1Rcy6dFZx8xiOBR6QeYvbAYi',
+  'inner-circle': 'price_1Rcy8gFZx8xiOBR6pDkANR4K',
+  lead: 'price_1RcyDiFZx8xiOBR6wYn8OUR6',
 };
 
 export async function POST(req) {
